@@ -1,0 +1,21 @@
+@import "../../styles/movieLayout";
+
+.page{
+  margin-top:80rpx;
+  height:100%;
+}
+.page-loading{
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top:10rpx;
+}
+.page-loading .loading-img{
+  margin-right:5rpx;
+  width:30rpx;
+  height:30rpx;
+}
+.sv{
+  height:1000rpx;
+}

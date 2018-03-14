@@ -1,0 +1,17 @@
+ <view class="page">
+  <view class="nav">
+    <view class="{{homeSelected?'current':'default'}}" bindtap="handleHomeSelected">正在热映</view>
+    <view class="{{comingSelected?'current':'default'}}" bindtap="handleComingSelected">即将上映</view>
+  </view>
+  <view class="{{homeSelected?'show':'hidden'}}">
+     <!-- 正在热映 -->
+     <movieList id="movieList" sendValue="{{movieType}}"></movieList> 
+  </view>
+  <view class="{{comingSelected?'show':'hidden'}}">
+     <!-- 即将上映 -->
+     <movieList id="movieComingList" sendValue="{{movieType}}"></movieList>   
+  </view> 
+</view>  
+
+
+

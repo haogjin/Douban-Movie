@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/finding/finding", 
+    "pages/user/user", 
+    "pages/detail/detail",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#dfdfdf",
+    "navigationBarTitleText": "豆瓣电影",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#dfdfdf",
+    "color": "#8a8a8a",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "text": "热映",
+        "iconPath": "images/ing.png",
+        "selectedIconPath": "images/ing-active.png",
+        "pagePath": "pages/home/home"
+      },
+      {
+        "text": "找片",
+        "iconPath": "images/find.png",
+        "selectedIconPath": "images/find-active.png",
+        "pagePath": "pages/finding/finding"
+      },
+      {
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-active.png",
+        "pagePath": "pages/user/user"
+      }
+    ]
+  },
+  "debug":true
+}

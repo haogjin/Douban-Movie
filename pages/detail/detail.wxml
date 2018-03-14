@@ -1,0 +1,42 @@
+<view class="page">
+    <view class="list">
+          <view class="left" style="width:40%;height:420rpx">
+            <image src="{{detailList.images.large}}" style="height:420rpx" />
+          </view>
+          <view class="right" style="width:60%;height:420rpx">
+            <view class="row">
+              <text style="font-size:20px;">{{detailList.original_title}} </text>{{detailList.year}}
+            </view>
+            <view class="row">
+              评分：{{detailList.rating.average}}
+            </view>
+            <view class="row">
+              导演：<view wx:for="{{detailList.directors}}" wx:for-item="directors" wx:key="{{index}}">
+                {{directors.name}}
+              </view>
+            </view>
+            <view class="row">
+              主演：<view wx:for="{{detailList.casts}}" wx:for-item="casts" wx:key="{{index}}">
+                {{casts.name}}
+              </view>
+            </view>  
+          </view>
+    </view>
+    <view class="story">
+      <text class="story-title">剧情简介</text>
+      <view class="story-detail">{{detailList.summary}}</view>
+    </view>
+    <view class="cast">
+      <text class="cast-title">影人</text>
+      <scroll-view scroll-left="0" scroll-x class="scroll">
+        <block  wx:for="{{detailList.casts}}" wx:key="{{index}}">
+          <view class="cast-detail">
+              <image src="{{item.avatars.large}}" />
+              <text class="cast-name" >{{item.name}}</text>          
+          </view>
+        </block>
+      </scroll-view>
+     
+    </view>
+   
+</view>

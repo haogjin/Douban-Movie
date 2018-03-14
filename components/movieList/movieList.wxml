@@ -1,0 +1,55 @@
+ <view class="page">
+  <block wx:if="{{showLoading}}">
+      <view class="page-loading">
+        <image class="loading-img" src="../../images/loading.gif" />
+        <text>玩命加载中...</text>
+      </view>
+    </block>
+  <block wx:else>
+    <scroll-view style="height:1100px;" scroll-y="{{true}}" scroll-top="0" 
+    bindscrolltolower="handleScrollToLower">
+      <block wx:for="{{list}}" wx:key="{{index}}">
+        <view class="list" data-id="{{item.id}}" bindtap="handleRedirect">
+          <view class="left">
+            <image src="{{item.images.large}}" />
+          </view>
+          <view class="middle">
+            <view class="row row-title">
+              {{item.original_title}}
+            </view>
+            <view class="row row-content">
+              评分：{{item.rating.average}}
+            </view>
+            <view class="row row-content">
+              导演：<view wx:for="{{item.directors}}" wx:for-item="directors" wx:key="{{index}}">
+                {{directors.name}}
+              </view>
+            </view>
+            <view class="row row-content">
+              主演：<view wx:for="{{item.casts}}" wx:for-item="casts" wx:key="{{index}}">
+                {{casts.name}} <text wx:if="{{index+1-item.casts.length < 0}}">/</text>
+              </view>
+            </view>  
+          </view>
+          <view class="right right-content">
+            <text>{{item.reviews_count}}人看过</text>
+            <button class="right-content-btn" bindtap="handleBuyTicket">购票</button>   
+          </view>
+        </view>
+      </block>
+      
+      <block wx:if="{{showMore}}">
+        <view class="page-loading">
+            <image class="loading-img" src="../../images/loading.gif" />
+            <text>玩命加载中...</text>
+          </view>
+      </block>
+      <block wx:else>
+        <view class="page-loading">
+           <text>没有更多内容了</text> 
+        </view>
+      </block>
+    </scroll-view>
+  </block>    
+ </view>
+ 

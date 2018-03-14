@@ -1,0 +1,31 @@
+@import "../../styles/movieLayout";
+.story,.cast{
+  margin:16rpx
+}
+.story-title,.cast-title{
+  font-size:12px;
+  color:#726F6F;
+}
+.story-detail{
+  text-indent:2em;
+  margin-top:10rpx;
+}
+
+.scroll{
+  display: flex;
+  white-space: nowrap;  
+  width:100%;
+}
+.cast-detail{
+   display: inline-block; 
+}
+.cast-detail image{
+  margin-top:10rpx;
+  display: block;  /* 将名字放在图片下面 */
+  height:300rpx;
+  width:130px;
+  padding-right: 10rpx;
+}
+.cast-detail text{
+  display: block; 
+}
